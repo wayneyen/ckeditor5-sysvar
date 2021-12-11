@@ -1,6 +1,6 @@
 import ckeditor from './../theme/icons/ckeditor.svg';
 
-export { default as MyPlugin } from './myplugin';
+export { default as sysvar } from './sysvar';
 
 export const icons = {
 	ckeditor

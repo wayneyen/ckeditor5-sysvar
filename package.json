@@ -1,7 +1,7 @@
 {
-  "name": "@cheerfulgive/ckeditor5-dropdown",
+  "name": "@cheerfulgive/ckeditor5-sysvar",
   "version": "0.0.1",
-  "description": "A plugin for CKEditor 5.",
+  "description": "系統欄位外掛",
   "keywords": [
     "ckeditor",
     "ckeditor5",
@@ -25,16 +25,16 @@
     "ckeditor5-metadata.json"
   ],
   "dependencies": {
+    "@ckeditor/ckeditor5-source-editing": "^31.1.0",
     "ckeditor5": ">=31.1.0"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-package-tools": "^1.0.0-beta.2",
-    "@ckeditor/ckeditor5-dev-utils": "^27.0.0",
-    "@ckeditor/ckeditor5-editor-classic": ">=31.1.0",
     "@ckeditor/ckeditor5-autoformat": ">=31.1.0",
     "@ckeditor/ckeditor5-basic-styles": ">=31.1.0",
     "@ckeditor/ckeditor5-block-quote": ">=31.1.0",
     "@ckeditor/ckeditor5-code-block": ">=31.1.0",
+    "@ckeditor/ckeditor5-dev-utils": "^27.0.0",
+    "@ckeditor/ckeditor5-editor-classic": ">=31.1.0",
     "@ckeditor/ckeditor5-essentials": ">=31.1.0",
     "@ckeditor/ckeditor5-heading": ">=31.1.0",
     "@ckeditor/ckeditor5-image": ">=31.1.0",
@@ -42,6 +42,7 @@
     "@ckeditor/ckeditor5-link": ">=31.1.0",
     "@ckeditor/ckeditor5-list": ">=31.1.0",
     "@ckeditor/ckeditor5-media-embed": ">=31.1.0",
+    "@ckeditor/ckeditor5-package-tools": "^1.0.0-beta.2",
     "@ckeditor/ckeditor5-paragraph": ">=31.1.0",
     "@ckeditor/ckeditor5-table": ">=31.1.0",
     "@ckeditor/ckeditor5-theme-lark": ">=31.1.0",
