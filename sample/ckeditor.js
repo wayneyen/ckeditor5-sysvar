@@ -20,8 +20,6 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
-import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
-import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 
 import Sysvar from '../src/sysvar';
 
@@ -50,9 +48,7 @@ ClassicEditor
 			Table,
 			TableToolbar,
 			CodeBlock,
-			Code,
-			Base64UploadAdapter,
-			SourceEditing
+			Base64UploadAdapter
 		],
 		toolbar: [
 			'sysvar',
@@ -73,11 +69,9 @@ ClassicEditor
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'codeBlock',
 			'|',
 			'undo',
-			'redo',
-			'SourceEditing'
+			'redo'
 		],
 		image: {
 			toolbar: [ 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', '|', 'imageTextAlternative' ]

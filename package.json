@@ -1,7 +1,8 @@
 {
-  "name": "@cheerfulgive/ckeditor5-sysvar",
-  "version": "0.0.1",
+  "name": "@wayneyen/ckeditor5-sysvar",
+  "version": "0.0.8",
   "description": "系統欄位外掛",
+  "private": false,
   "keywords": [
     "ckeditor",
     "ckeditor5",
@@ -22,13 +23,18 @@
     "src",
     "theme",
     "build",
+    "dist",
     "ckeditor5-metadata.json"
   ],
   "dependencies": {
-    "@ckeditor/ckeditor5-source-editing": "^31.1.0",
-    "ckeditor5": ">=31.1.0"
   },
   "devDependencies": {
+    "ckeditor5": ">=31.1.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^3.1.0",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.46.0",
+    "@ckeditor/ckeditor5-source-editing": "^31.1.0",
     "@ckeditor/ckeditor5-autoformat": ">=31.1.0",
     "@ckeditor/ckeditor5-basic-styles": ">=31.1.0",
     "@ckeditor/ckeditor5-block-quote": ">=31.1.0",
@@ -51,7 +57,8 @@
     "eslint-config-ckeditor5": ">=3.1.1",
     "http-server": "^13.0.2",
     "stylelint": "^13.13.1",
-    "stylelint-config-ckeditor5": ">=2.0.1"
+    "stylelint-config-ckeditor5": ">=2.0.1",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "dll:build": "ckeditor5-package-tools dll:build",
@@ -62,5 +69,11 @@
     "test": "ckeditor5-package-tools test",
     "prepare": "yarn run dll:build",
     "prepublishOnly": "yarn run dll:build"
+  },
+  "workspaces": {
+    "packages": [
+      "ckeditor5-build-classic-master",
+      "sysvar"
+    ]
   }
 }

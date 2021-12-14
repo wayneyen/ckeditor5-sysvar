@@ -7,4 +7,8 @@ export default class Sysvar extends Plugin {
 	static get requires() {
 		return [ SysvarEditing, SysvarUI ];
 	}
+
+	static get pluginName() {
+		return 'Sysvar';
+	}
 }
