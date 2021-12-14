@@ -25,7 +25,7 @@ export default class SysvarEditing extends Plugin {
 			isInline: true,
 			isObject: true,
 			allowAttributesOf: '$text',
-			allowAttributes: [ 'data-th-text', 'name' ]
+			allowAttributes: [ 'code', 'label' ]
 		} );
 	}
 
@@ -39,8 +39,9 @@ export default class SysvarEditing extends Plugin {
 				classes: [ 'sysvar' ]
 			},
 			model: ( viewElement, { writer: modelWriter } ) => {
-				const name = viewElement.getChild( 0 ).data.slice( 1, -1 );
-				return modelWriter.createElement( 'sysvar', { name } );
+				const code = viewElement.getAttribute( 'data-th-text' );
+				const label = viewElement.getChild( 0 ).data;
+				return modelWriter.createElement( 'sysvar', { code, label } );
 			}
 		} );
 
@@ -62,19 +63,17 @@ export default class SysvarEditing extends Plugin {
 
 		// 建立視圖
 		function createSysvarView( modelItem, viewWriter ) {
-			console.log('modelItem', modelItem);
-			const name = modelItem.getAttribute( 'name' );
-			const key = modelItem.getAttribute( 'key' );
+			const code = modelItem.getAttribute( 'code' );
+			const label = modelItem.getAttribute( 'label' );
 
 			const sysvarView = viewWriter.createContainerElement( 'span', {
 				class: 'sysvar',
-				'data-th-text': key
+				'data-th-text': code
 			}, {
-				isAllowedInsideAttributeElement: true
+				isAllowedInsideAttributeElement: false
 			} );
 
-			// Insert the sysvar name (as a text).
-			const innerText = viewWriter.createText( name );
+			const innerText = viewWriter.createText( label );
 			viewWriter.insert( viewWriter.createPositionAt( sysvarView, 0 ), innerText );
 
 			return sysvarView;

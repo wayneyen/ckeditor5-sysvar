@@ -23,8 +23,8 @@ export default class SysvarUI extends Plugin {
 
 			this.listenTo( dropdownView, 'execute', evt => {
 				editor.execute( 'sysvar', {
-					commandParam: evt.source.commandParam,
-					value: evt.source.label
+					code: evt.source.code,
+					label: evt.source.label
 				} );
 				editor.editing.view.focus();
 			} );
@@ -41,8 +41,8 @@ function getDropdownItemsDefinitions( options ) {
 		const definition = {
 			type: 'button',
 			model: new Model( {
-				commandParam: option.key,
-				label: option.value,
+				code: option.code,
+				label: option.label,
 				withText: true
 			} )
 		};
