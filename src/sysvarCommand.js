@@ -1,4 +1,4 @@
-import { Command } from 'ckeditor5/src/core';
+import Command from '@ckeditor/ckeditor5-core/src/command';
 
 export default class SysvarCommand extends Command {
 	execute( { code, label } ) {

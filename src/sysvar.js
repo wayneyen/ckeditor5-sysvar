@@ -1,5 +1,4 @@
-import { Plugin } from 'ckeditor5/src/core';
-
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import SysvarEditing from './sysvarEditing';
 import SysvarUI from './sysvarUI';
 

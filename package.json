@@ -1,6 +1,6 @@
 {
   "name": "@wayneyen/ckeditor5-sysvar",
-  "version": "0.0.8",
+  "version": "0.1.4",
   "description": "系統欄位外掛",
   "private": false,
   "keywords": [
@@ -10,7 +10,8 @@
     "ckeditor5-feature",
     "ckeditor5-plugin",
     "ckeditor5-dll",
-    "ckeditor5-package-generator"
+    "ckeditor5-package-generator",
+    "cheerfulgive"
   ],
   "main": "src/index.js",
   "license": "MIT",

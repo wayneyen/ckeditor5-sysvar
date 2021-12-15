@@ -1,7 +1,7 @@
-import { Plugin } from 'ckeditor5/src/core';
-import { toWidget, viewToModelPositionOutsideModelElement } from 'ckeditor5/src/widget';
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
+import { toWidget, viewToModelPositionOutsideModelElement } from '@ckeditor/ckeditor5-widget/src/utils';
 import SysvarCommand from './sysvarCommand';
-import '../theme/sysvar.css';
+import './sysvar.css';
 
 export default class SysvarEditing extends Plugin {
 	init() {

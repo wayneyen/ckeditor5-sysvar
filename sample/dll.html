@@ -77,15 +77,12 @@
 <script src="../node_modules/@ckeditor/ckeditor5-table/build/table.js"></script>
 
 <!-- The "@cheerfulgive/ckeditor5-sysvar" package DLL build is served from the `build/` directory -->
-<script src="../build/sysvar.js"></script>
 
 <script>
-	console.log( 'Objects exported by the DLL build:', CKEditor5[ 'sysvar' ] );
 
 	CKEditor5.editorClassic.ClassicEditor
 		.create( document.querySelector( '#editor' ), {
 			plugins: [
-				CKEditor5[ 'sysvar' ].MyPlugin,
 				CKEditor5.essentials.Essentials,
 				CKEditor5.autoformat.Autoformat,
 				CKEditor5.blockQuote.BlockQuote,
@@ -110,7 +107,6 @@
 			],
 			toolbar: [
 				// `myButton` is an example button provided by the `MyPlugin` class.
-				'sysvar',
 				'|',
 				'heading',
 				'|',

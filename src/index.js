@@ -1,1 +1,1 @@
-export { default as sysvar } from './sysvar';
+export { default as Sysvar } from './sysvar';
