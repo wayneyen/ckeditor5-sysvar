@@ -3,6 +3,11 @@
   "version": "0.1.4",
   "description": "系統欄位外掛",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wayneyen/ckeditor5-sysvar"
+  },
+  "homepage": "https://github.com/wayneyen/ckeditor5-sysvar",
   "keywords": [
     "ckeditor",
     "ckeditor5",
